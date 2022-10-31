@@ -7,8 +7,8 @@
   --font-yellow: #FFEE2E;
   --button-background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   --section-background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  --section-background-grey: rgba(253, 253, 255, 0.52);
   --orange-color: #FE9013;
-  --section-background-2: rgba(253, 253, 255, 0.52);
 }
 
 html, body, h1, h2, h3, p {
@@ -236,7 +236,7 @@ span {
 
 #animals-cards > button {
   background: var(--orange-color);
-  margin: 80px 0 100px 0;
+  margin: 70px 0 100px 0;
 }
 
 #animals-cards::after {
@@ -245,7 +245,7 @@ span {
   width: 368px;
   height: 275px;
   background: url(../../assets/images/strelitzia.png) no-repeat;
-  bottom: 0px;
+  top: 2334px;
   right: 0px;
 }
 
@@ -255,8 +255,103 @@ span {
   width: 292px;
   height: 460px;
   background: url(../../assets/images/palm-photo.png) no-repeat;
-  bottom: 0px;
+  top: 2149px;
   left: 0px;
+}
+
+#pick-and-feed {
+  height: 1004px;
+  background: var(--section-background);
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feed-container {
+  width: 1160px;
+  height: 835px;
+  margin-bottom: 31px;;
+  background: var(--section-background-grey);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.feed-text {
+  margin: 30px 0;
+  color: var(--font-dark);
+}
+
+.feed-text > p > a {
+  text-decoration: underline;
+  color: var(--font-dark);
+  text-decoration-color: var(--orange-color);
+}
+
+.feed-text > h2 {
+  margin-top: 11px;
+  text-align: center;
+  color: var(--orange-color);
+}
+
+.feed-container > h3 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 400;
+  margin: 30px 0;
+}
+
+.feed-text > .subtitle {
+  margin: 30px 0 30px 99px;
+}
+
+.feed-text > p {
+  margin-left: 99px;
+}
+
+.text-bold {
+  font-weight: 500;
+  line-height: 130%;
+  margin: 10px 0;
+}
+
+.widget {
+  width: 764px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 10px auto 60px auto;
+}
+
+.widget-icon {
+  height: 168px;
+  width: 168px;
+  border: 1px solid var(--orange-color);
+  border-radius: 5px;
+  background: var(--font-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-container {
+  height: 168px;
+  display: flex;
+  justify-content: center;
+}
+
+.widget-item {
+  width: 168px;
+}
+
+.widget-text {
+  margin: 30px 0;
+}
+
+.widget > img {
+  width: 69px;
 }
 
 button {
@@ -267,6 +362,11 @@ button {
   border-radius: 25px;
   border-style: none;
   font-size: 16px;
+}
+
+.feed-container > button {
+  background: var(--button-background);
+  margin: 0 auto;
 }
 
 .arrow-button {
