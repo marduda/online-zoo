@@ -1,0 +1,90 @@
+:root {
+  --dark-background: #111115;
+  --header-background: #000;
+  --icon-background: #C4C4C480;
+  --font-light: #FFF;
+  --font-dark: #333B41;
+  --font-yellow: #FFEE2E;
+  --button-background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  --section-background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  --orange-color: #FE9013;
+  --section-background-2: rgba(253, 253, 255, 0.52);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1600px;
+  display: flex;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  background-color: var(--header-background);
+  color: var(--font-light);
+}
+
+h1 {
+  text-align: center;
+  font-size: 19.03px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--orange-color);
+}
+
+#logo {
+  width: 82px;
+  height: 52px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--font-light);
+  border-radius: 2px;
+  background: url(../../assets/icons/bamboo-logo.svg) no-repeat;
+  background-position: 10px 23px;
+}
+
+#logo:hover {
+  border-color: var(--orange-color);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-nav {
+  margin-left: 220px;
+  width: 617px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-nav {
+  margin-right: 220px;
+}
+
+nav > div > a {
+  color: var(--font-light);
+}
