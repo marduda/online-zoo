@@ -41,6 +41,12 @@ header {
   color: var(--font-light);
 }
 
+.active {
+  color: var(--orange-color);
+  cursor: default;
+  pointer-events: none;
+}
+
 h1 {
   text-align: center;
   font-size: 19.03px;
@@ -143,7 +149,7 @@ nav > div > a {
   text-transform: uppercase;
 }
 
-span {
+.yellow-font {
   color: var(--font-yellow);
 }
 
@@ -215,6 +221,28 @@ span {
   border-radius: 5px;
   border: 1px solid #FA6F32;
   overflow: hidden;
+  transition: all 0.5s ease-in-out 0.1s;
+  background-color: #333b4100;
+}
+
+.card-image {
+  height: 366px;
+  transition: all 0.5s ease-in-out 0.1s;
+}
+
+.card-image > img {
+  transform: scale(100%) translateY(0);
+  /* position: relative; */
+  z-index: -1;
+}
+
+.pet-card:hover .card-image {
+  transform: scale(120%) translateY(20px);
+  opacity: 0.4;
+}
+
+.pet-card:hover {
+  background-color: #333b41;
 }
 
 .card-text {
@@ -223,6 +251,13 @@ span {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.5s ease-in-out 0.1s;
+  transform: translateY(0);
+}
+
+.pet-card:hover .card-text {
+  transform: translateY(-180px);
+  color: var(--font-light);
 }
 
 .card-title > h3 {
@@ -362,10 +397,15 @@ button {
   border-radius: 25px;
   border-style: none;
   font-size: 16px;
+  transform: scale(1);
+  box-shadow: 0 var(--font-dark);
+  transition: all 0.5s ease-in-out;
 }
 
 button:hover {
   cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0 0 4px 2px rgba(20, 20, 20, 0.4);
 }
 
 .feed-container > button {
@@ -382,4 +422,124 @@ button:hover {
 
 .arrow-left {
   transform: rotate(180deg);
+}
+.arrow-left:hover {
+  transform: rotate(180deg) scale(1.2);
+}
+
+#testimonials::before {
+  content: '';
+  position: absolute;
+  width: 292px;
+  height: 460px;
+  background: url(../../assets/images/leaf-photo.png) no-repeat;
+  top: 4257px;
+  right: 0px;
+  z-index: -1;
+}
+
+#testimonials {
+  height: 919px;
+  width: 1160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+}
+
+#testimonials > h3 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 47px;
+  margin: 140px 0 47px 0;
+  text-align: center;
+}
+
+#testimonials > button {
+  border-radius: 5px;
+  background-color: var(--orange-color);
+  margin: 32px 0 180px 0;
+}
+
+.testimonials-card {
+  height: 391px;
+  width: 266px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 15px 19px 16px;
+  overflow: hidden;
+  background: linear-gradient(#F1F3F2, #F1F3F2 ) padding-box,
+linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
+  border-radius: 20px;
+  border: 2px solid transparent;
+}
+
+.testimonials-card > p {
+  color: #767474;
+}
+
+.testimonials-header {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.small-paragraph {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0em;
+  color: #BDBDBD;
+}
+
+.user-information {
+  display: flex;
+
+}
+
+.user-info > h3 {
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+}
+
+.user-icon {
+  width: 37px;
+  height: 37px;
+}
+
+.progress-bar {
+  width: 50%;
+  height: 8px;
+  margin-top: 21px;
+  background: linear-gradient(#F1F3F2, #F1F3F2 ) padding-box,
+              linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress-scroll {
+  width: 20%;
+  height: 6px;
+  background-color: var(--orange-color);
+  border-radius: 3px;
+}
+
+.button-left {
+  align-self: flex-start;
 }

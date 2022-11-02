@@ -14,7 +14,7 @@
         <nav>
           <div class="left-nav">
             <a id="logo" href="#"><h1>PetStory online</h1></a>
-            <a href="#">About</a>
+            <a class="active" href="#">About</a>
             <a href="#">Map</a>
             <a href="#">Zoos</a>
             <a href="./pages/donate/index.html">Donate</a>
@@ -26,7 +26,7 @@
       </header>
       <section id="watch-online-block">
         <div class="circle">
-          <p>watch your <span>favorite</span> animal online</p>
+          <p>watch your <span class="yellow-font">favorite</span> animal online</p>
         </div>
         <button>watch online</button>
       </section>
@@ -48,7 +48,9 @@
           </button>
           <div class="cards-container">
             <div class="pet-card">
-              <img src="./assets/images/giant-pandas.jpg" alt="Two Giant Pandas playing on tire swing">
+              <div class="card-image">
+                <img src="./assets/images/giant-pandas.jpg" alt="Two Giant Pandas playing on tire swing">
+              </div>
               <div class="card-text">
                 <div class="card-title">
                   <h3>giant Pandas</h3>
@@ -60,7 +62,9 @@
               </div>
             </div>
             <div class="pet-card">
-              <img src="./assets/images/eagles.jpg" alt="Flying Eagle">
+              <div class="card-image">
+                <img src="./assets/images/eagles.jpg" alt="Flying Eagle">
+              </div>
               <div class="card-text">
                 <div class="card-title">
                   <h3>Eagles</h3>
@@ -72,7 +76,9 @@
               </div>
             </div>
             <div class="pet-card">
-              <img src="./assets/images/gorillas.jpg" alt="Huge Gorilla">
+              <div class="card-image">
+                <img src="./assets/images/gorillas.jpg" alt="Huge Gorilla">
+              </div>
               <div class="card-text">
                 <div class="card-title">
                   <h3>Gorillas</h3>
@@ -84,7 +90,9 @@
               </div>
             </div>
             <div class="pet-card">
-              <img src="./assets/images/sloth.jpg" alt="Two toed Sloth hanging on the tree">
+              <div class="card-image">
+                <img src="./assets/images/sloth.jpg" alt="Two toed Sloth hanging on the tree">
+              </div>
               <div class="card-text">
                 <div class="card-title">
                   <h3>Two-toed Sloth</h3>
@@ -96,7 +104,9 @@
               </div>
             </div>
             <div class="pet-card">
-              <img src="./assets/images/cheetahs.jpg" alt="Mother Cheetah and her baby">
+              <div class="card-image">
+                <img src="./assets/images/cheetahs.jpg" alt="Mother Cheetah and her baby">
+              </div>
               <div class="card-text">
                 <div class="card-title">
                   <h3>Cheetahs</h3>
@@ -108,7 +118,9 @@
               </div>
             </div>
             <div class="pet-card">
-              <img src="./assets/images/penguins.jpg" alt="Penguin standing on ice">
+              <div class="card-image">
+                <img src="./assets/images/penguins.jpg" alt="Penguin standing on ice">
+              </div>
               <div class="card-text">
                 <div class="card-title">
                   <h3>Penguins</h3>
@@ -167,8 +179,63 @@
               </div>
             </div>
           </div>
-          <button>Feed a friend now</button>
+          <button onclick="window.location.href='./pages/donate/index.html'">Feed a friend now</button>
         </div>
+      </section>
+      <section id="testimonials">
+        <h3>Testimonials</h3>
+        <div class="cards-container">
+          <div class="testimonials-card">
+            <div class="testimonials-header">
+              <img class="user-icon" src="./assets/icons/user-icon.svg" alt="portrait">
+              <div class="user-info">
+                <h3>Michael John</h3>
+                  <p class="small-paragraph">Local Austria &middot; Today</p>
+                </div>
+            </div>
+            <p class="small-paragraph">The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+              The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+              </p>
+          </div>
+          <div class="testimonials-card">
+            <div class="testimonials-header">
+              <img class="user-icon" src="./assets/images/portrait-01.png" alt="portrait">
+              <div class="user-info">
+                <h3>Oskar Samborsky</h3>
+                  <p class="small-paragraph">Local Austria &middot; Today</p>
+                </div>
+            </div>
+            <p class="small-paragraph">The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+              The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+              </p>
+          </div><div class="testimonials-card">
+            <div class="testimonials-header">
+              <img class="user-icon" src="./assets/images/portrait-02.png" alt="portrait">
+              <div class="user-info">
+                <h3>Fredericka Michelin</h3>
+                  <p class="small-paragraph">Local Austria &middot; Today</p>
+                </div>
+            </div>
+            <p class="small-paragraph">The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+              The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+              </p>
+          </div><div class="testimonials-card">
+            <div class="testimonials-header">
+              <img class="user-icon" src="./assets/images/portrait-03.png" alt="portrait">
+              <div class="user-info">
+                <h3>Mila Riksha</h3>
+                  <p class="small-paragraph">Local Austria &middot; Today</p>
+                </div>
+            </div>
+            <p class="small-paragraph">The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+              The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.The best online zoo I&rsquo;ve met. My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
+              </p>
+          </div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-scroll"></div>
+        </div>
+        <button class="button-left">leave feedback</button>
       </section>
     </div>
 	<script src="./pages/main/script.js"></script>
