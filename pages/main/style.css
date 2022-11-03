@@ -43,6 +43,9 @@ header {
 
 .active {
   color: var(--orange-color);
+}
+
+.disabled {
   cursor: default;
   pointer-events: none;
 }
