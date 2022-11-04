@@ -50,11 +50,6 @@ header {
   color: var(--orange-color);
 }
 
-.disabled {
-  cursor: default;
-  pointer-events: none;
-}
-
 h1 {
   text-align: center;
   font-size: 19.03px;
