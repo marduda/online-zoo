@@ -50,11 +50,6 @@ header {
   color: var(--orange-color);
 }
 
-.disabled {
-  cursor: default;
-  pointer-events: none;
-}
-
 h1 {
   text-align: center;
   font-size: 19.03px;
@@ -384,6 +379,10 @@ nav > div > a {
   justify-content: center;
 }
 
+.arrow-container > img {
+  width: 67px;
+}
+
 .widget-item {
   width: 168px;
 }
@@ -438,8 +437,8 @@ button:active {
 #testimonials::before {
   content: '';
   position: absolute;
-  width: 292px;
-  height: 460px;
+  width: 247px;
+  height: 408px;
   background: url(../../assets/images/leaf-photo.png) no-repeat;
   top: 4257px;
   right: 0px;
