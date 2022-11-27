@@ -30,27 +30,6 @@ body {
   line-height: 140%;
 }
 
-.container {
-  position: relative;
-  width: 1600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  position: absolute;
-  width: 1600px;
-  height: 80px;
-  display: flex;
-  background-color: var(--header-background);
-  color: var(--font-light);
-}
-
-.active, .c-orange {
-  color: var(--orange-color);
-}
-
 h1 {
   text-align: center;
   font-size: 19.03px;
@@ -86,6 +65,56 @@ p {
   line-height: 130%;
 }
 
+.container {
+  position: relative;
+  width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  background-color: var(--header-background);
+  color: var(--font-light);
+}
+
+nav {
+  width: calc(100% - 440px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.burger-icon {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+
+}
+
+ul > li {
+  padding: 0 29px;
+}
+
+ul > li:last-child {
+  margin-left: auto;
+}
+
+.active, .c-orange {
+  color: var(--orange-color);
+}
+
 button {
   width: 298px;
   height: 54px;
@@ -113,6 +142,7 @@ button:active {
 
 #logo {
   width: 82px;
+  flex-shrink: 0;
   height: 52px;
   margin-right: 5px;
   display: flex;
@@ -128,25 +158,6 @@ button:active {
   border-color: var(--orange-color);
 }
 
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.left-nav {
-  margin-left: 220px;
-  width: 617px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.right-nav {
-  margin-right: 220px;
-}
-
 nav > div > a {
   color: var(--font-light);
 }
@@ -155,20 +166,21 @@ nav > div > a {
   margin-top: 76px;
   width: 100%;
   height: 390px;
-  background-image: url(./../../assets/images/panda-bg.jpg);
+  overflow: hidden;
+  /* z-index: -1; */
 }
 
 #donate {
-  height: 1482px;
+  /* height: 1482px; */
   width: 100%;
   background: var(--section-background);
+
 }
 
 .feed-container {
   position: relative;
-  width: 1160px;
-  height: 964px;
-  margin: 50px auto 180px auto;
+  max-width: 1160px;
+  margin: 50px auto 0 auto;
   background: var(--section-background-grey);
   display: flex;
   flex-direction: column;
@@ -176,13 +188,17 @@ nav > div > a {
   color: var(--font-dark);
   text-align: center;
   z-index: 1;
+  padding-bottom: 62px;
 }
 
 .donate-container {
-  width: 1160px;
+  box-sizing: content-box;
+  max-width: 1160px;
   height: 100%;
   margin: 0 auto;
-  color:var(--font-light)
+  padding: 0 30px;
+  color:var(--font-light);
+  padding-bottom: 180px;
 }
 
 .donate-container h2 {
@@ -205,18 +221,20 @@ nav > div > a {
   align-items: center;
   justify-content: space-between;
   width: 517px;
-
 }
 
 #x-icon {
   width: 14px;
   height: 14px;
+  margin-right: 46px;
 }
 
 #panda-icon {
   width: 284px;
   height: 246px;
 }
+
+
 
 .counter {
   font-size: 72px;
@@ -226,6 +244,7 @@ nav > div > a {
   text-align: center;
   margin-bottom: 11px;
   color: #000;
+  margin-top: 40px;
 
 }
 
@@ -237,23 +256,31 @@ nav > div > a {
   text-align: left;
 }
 
-fieldset {
+.progress-bar {
   width: 976px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+fieldset {
+  position: relative;
+  width: 100%;
   margin: 48.5px auto 6px auto;
   border: 0;
+  padding: 0;
 }
 
 legend {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
-  margin-bottom: 17px;
+  margin-bottom: 20px;
 }
 
 .radio-container::before {
   content: '';
   position: absolute;
-  width: 976px;
+  width: 100%;
   height: 27px;
   background: #404950;
   border-radius: 2px;
@@ -261,22 +288,36 @@ legend {
 }
 
 .radio-container {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-
-
 
 .radio-container::after {
   content: '';
   position: absolute;
-  width: 915px;
+  width: calc(100% - 56px);
+  margin-left: 26px;
   height: 2px;
   background: #72828E;
-  left: 120px;
-  margin: 12px;
   z-index: -1;
+}
+
+.radio-item {
+  position: relative;
+  margin: 0 26px;
+  transform: translateY(-2px);
+}
+
+.radio-item > label {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 36px;
+  position: absolute;
+  top: 35px;
+
 }
 
 .radio-item input[type=radio] {
@@ -284,14 +325,24 @@ legend {
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  border: 0;
+  border: none;
+  border: 15px black transparent;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #FFEE2E;
   transition: 0.2s all linear;
-  margin-right: 5px;
-  position: relative;
-  margin-bottom: 21px;
-  top: 0;
-  transform: translateY(5px);
+}
+
+.radio-item input[type=radio]::before {
+  content: '';
+  display: block;
+  position: absolute;
+  object-position: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
 
 .radio-item input[type=radio]:checked {
@@ -312,8 +363,6 @@ legend {
   background: url('../../assets/icons/roller-icon.svg');
   width: 40px;
   height: 40px;
-  top: -16px;
-  left: -16px;
 }
 
 input[type=radio] {
@@ -330,8 +379,8 @@ input[type=radio] {
 }
 
 input[type=radio]:checked {
-  border: 1px solid #4B9200;
-  background: #4B9200;
+  border: 1px solid -var(--green-color);
+  background: var(--green-color);
 }
 
 .donate-plan label {
@@ -344,34 +393,41 @@ input[type=radio]:checked {
 .radio-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.radio-item > label {
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 36px;
-}
+
 
 .radio-item > label::before {
   content: url("../../assets/icons/dolar.svg");
-  position: relative;
+  position: inherit;
   width: 10px;
   height: 20px;
   top: 2px;
-  right: 1px;
+  left: -10px;
 }
 
 .input-container {
   position: relative;
   height: 54px;
   width: 268px;
-  left: 92px;
-  margin-top: 40px;
+  margin: 98px auto 0 auto;
+}
+
+.dolar-icon {
+  position: absolute;
+  background: url('../../assets/icons/dolar-grey.svg');
+  height: 20px;
+  width: 10px;
+  right: 12px;
+  top: 17px;
 }
 
 #another-amount {
   box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
   padding-left: 9px;
   height: 54px;
   width: 268px;
@@ -380,10 +436,6 @@ input[type=radio]:checked {
   color: #929699;
   appearance: textfield;
   background-color: rgba( 0, 0, 0, 0);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
 }
 
 #another-amount:focus {
@@ -405,17 +457,16 @@ input[type=radio]:checked {
   background: url('../../assets/icons/dolar-red.svg');
 }
 
-.dolar-icon {
-  position: absolute;
-  background: url('../../assets/icons/dolar-grey.svg');
-  height: 20px;
-  width: 10px;
-  right: 12px;
-  top: 17px;
-}
+
 
 .donate-plan {
+  display: flex;
+  justify-content: center;
   margin: 8px 0 43px 0;
+}
+
+.donate-item {
+  margin: 0 25px;
 }
 
 footer {
@@ -566,4 +617,328 @@ a:hover .ellipse {
 
 #icon-youtube {
   width: 18px;
+}
+
+@media (max-width: 1600px) {
+  :root {
+    --divider: 3.5;
+  }
+  nav {
+    width: calc(100% - 60px);
+  }
+
+  .container {
+    width: 100vw;
+  }
+
+  .background-img > img {
+    transform: translateX(calc((1600px - 100vw) * -1 / 3.5));
+  }
+
+  .donate-container {
+    padding-bottom: max(30px, calc((100vw - 1000px) / 3.33333 ));
+  }
+
+
+}
+
+@media (max-width: 1000px) {
+  ul > li {
+    padding: 0 calc(100vw / 41.6);
+    font-size: calc(1em - (10px - 1vw));
+  }
+
+  #logo {
+    margin-right: 41px;
+  }
+
+  .donate-container  h3:first-of-type {
+    max-width: 778px;
+  }
+
+  .donate-container > p {
+    margin-top: 20px;
+  }
+
+  .donate-container {
+    padding-bottom: 30px;
+  }
+
+  .donate-container h2 {
+    margin-top: 20px;
+  }
+
+  .feed-container {
+    margin-top: 30px;
+  }
+
+  .subtitle {
+    margin: 10px 0 60px 47px;
+  }
+
+  .progress-bar {
+    max-width: 810px;
+    width: 100%;
+  }
+
+  .radio-container .radio-item:first-of-type {
+    display: none;
+  }
+
+  .radio-container::after {
+    width: calc(100% - 22px);
+    margin-left: 11px;
+  }
+
+  .radio-item {
+    margin: 0 11px;
+  }
+
+  .donate-plan {
+    margin: 26px 0 29px 0;
+  }
+
+  .footer-container {
+    width: calc(100vw - 62px);
+  }
+
+}
+
+@media (max-width: 640px) {
+  header {
+    height: 34px;
+  }
+
+  .burger-icon {
+    display: block;
+  }
+
+  .background-img {
+    margin-top: 34px;
+    height: 335px;
+  }
+
+  .background-img > img {
+    height: 100%;
+  }
+
+  nav {
+    width: calc(100% - 40px);
+  }
+
+  #logo {
+    border: none;
+    width: 47px;
+    height: 29px;
+    background-position: left 3px bottom 2px;
+    background-size: 10px 13.5px;
+  }
+
+  h1 {
+    font-size: 12.3px;
+    line-height: 14.75px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .donate-container {
+    padding-bottom: 46px;
+  }
+
+  .donate-container > h3:first-of-type {
+    font-size: 24px;
+    line-height: 29px;
+    padding: 30px 0 0 0;
+  }
+
+  .donate-container > h3:last-of-type {
+    padding: 30px 0 0 0;
+  }
+
+  .donate-container > p {
+    line-height: 22px;
+  }
+
+  .donate-container > h2 {
+    margin-top: 30px;
+  }
+
+  .subtitle {
+    text-align: center;
+    margin: 20px 0 50px 0;
+  }
+
+  .radio-container .radio-item:nth-of-type(-n+3) {
+    display: none;
+  }
+
+  .radio-container::after {
+    width: calc(100% - 70px);
+    margin-left: 35px;
+  }
+
+  .radio-item {
+    margin: 0 35px;
+  }
+
+  .radio-item > label {
+    top: 30px;
+  }
+
+  .input-container {
+    width: 180px;
+    height: 42px;
+  }
+
+  .dolar-icon {
+    top: 10px;
+  }
+
+  .donate-plan {
+    margin: 29px 0;
+  }
+
+  .feed-container {
+    padding-bottom: 30px;
+  }
+
+  .feed-container > button {
+    margin-bottom: 30px;
+  }
+
+
+
+  #another-amount {
+    width: 180px;
+    height: 42px;
+  }
+
+  form {
+    display: none;
+  }
+
+}
+
+@media (max-width: 320px) {
+  nav {
+    width: calc(100% - 20px);
+  }
+
+  .background-img {
+    height: 187px;
+  }
+
+  .background-img > img {
+    height: 100%;
+    transform: translateX(calc((1600px - 100vw) * -1 / 8.65));
+  }
+
+
+  h2, h3 {
+    font-size: 1.5rem;
+    line-height: 28.8px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 10px 0;
+  }
+
+  #panda-icon {
+    width: 160px;
+    height: 139px;
+  }
+
+  #x-icon {
+    width: 8px;
+    height: 8px;
+    margin-right: 34px;
+    margin-bottom: -10px;
+  }
+
+  .counter {
+    font-size: 41px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0em;
+  }
+
+  fieldset {
+    margin-top: 4px;
+  }
+
+  .counter-container > p:last-of-type {
+    font-size: 9px;
+    line-height: 13px;
+    width: 90px;
+  }
+
+  .donate-container {
+    padding: 0 10px 20px 10px;
+  }
+
+  .radio-item {
+    margin: 0 17.5px;
+  }
+
+  .radio-item input[type="radio"]::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  .radio-item > input[type='radio'] {
+    width: 5px;
+    height: 5px;
+  }
+
+  .radio-container::before {
+    height: 13.5px;
+    border-radius: 1px;
+  }
+
+  .radio-container::after {
+    height: 1px;
+    border-radius: 0px;
+    width: calc(100% - 37px);
+    margin-left: 20.5px;
+
+  }
+
+  .radio-item input[type=radio]:checked::after {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+  }
+
+  .radio-item > label {
+    font-size: 13px;
+    line-height: 18px;
+    top: 18px;
+  }
+
+  .radio-item > label::before {
+    top: 0;
+    left: -9px;
+    transform: scale(0.5);
+
+  }
+
+  .input-container {
+    margin-top: 49px;
+  }
+
+  .donate-plan {
+    margin: 27px 0 31px 0;
+  }
+
+  .feed-container > p:last-of-type {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0em;
+    width: 301px;
+  }
+
 }

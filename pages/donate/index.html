@@ -12,19 +12,20 @@
     <div class="container">
       <header>
         <nav>
-          <div class="left-nav">
-            <a id="logo" href="../../index.html"><h1>PetStory online</h1></a>
-            <a href="../../index.html">About</a>
-            <a href="#">Map</a>
-            <a href="#">Zoos</a>
-            <a class="active" href="#">Donate</a>
-            <a href="#">Contact us</a></div>
-          <div class="right-nav">
-            <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank">Designed by ©</a>
-          </div>
+          <a id="logo" href="../../index.html"><h1>PetStory online</h1></a>
+          <a class="burger-icon"><img src="../../assets/icons/burger-menu.svg"></a>
+          <ul class="menu">
+            <li><a href="../../index.html">About</a></li>
+            <li><a href="#">Map</a></li>
+            <li><a href="#">Zoos</a></li>
+            <li><a class="active" href="#">Donate</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank">Designed by ©</a></li>
+          </ul>
         </nav>
       </header>
-      <div class="background-img"></div>
+      <div class="background-img"><img src="../../assets/images/panda-bg.jpg"></div>
+
       <main>
         <section id="donate">
           <div class="donate-container">
@@ -36,7 +37,7 @@
               <p class="subtitle">We know the animals bring you joy, and in these extraordinary times, we&rsquo;re glad.</p>
               <div class="widget">
                 <div class="widget-item">
-                  <div>
+                  <div class="counter-container">
                     <p class="counter">4</p>
                     <p>Panda diet for the day.</p>
                   </div>
@@ -88,10 +89,14 @@
                 <span class="dolar-icon"></span>
               </div>
               <div class="donate-plan">
-                <input type="radio" id="monthly" name="donate-plan" value="monthly">
-                <label for="monthly">Monthly</label>
-                <input type="radio" id="once" name="donate-plan" value="once" checked>
-                <label for="once">Once</label>
+                <div class="donate-item">
+                  <input type="radio" id="monthly" name="donate-plan" value="monthly">
+                  <label for="monthly">Monthly</label>
+                </div>
+                <div class="donate-item">
+                  <input type="radio" id="once" name="donate-plan" value="once" checked>
+                  <label for="once">Once</label>
+                </div>
               </div>
               <button>Feed a friend now</button>
               <p>Share with your friends on social networks</p>
