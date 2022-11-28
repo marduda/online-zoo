@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Online Zoo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./pages/main/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   </head>
@@ -12,16 +13,16 @@
     <div class="container">
       <header>
         <nav>
-          <div class="left-nav">
-            <a id="logo" href="#"><h1>PetStory online</h1></a>
-            <a class="active" href="#">About</a>
-            <a href="#">Map</a>
-            <a href="#">Zoos</a>
-            <a href="./pages/donate/index.html">Donate</a>
-            <a href="#">Contact us</a></div>
-          <div class="right-nav">
-            <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank">Designed by ©</a>
-          </div>
+          <a id="logo" href="#"><h1>PetStory online</h1></a>
+          <a class="burger-icon"><img src="../../assets/icons/burger-menu.svg"></a>
+          <ul class="menu">
+            <li><a class="active" href="#">About</a></li>
+            <li><a href="#">Map</a></li>
+            <li><a href="#">Zoos</a></li>
+            <li><a href="./pages/donate/index.html">Donate</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank">Designed by ©</a></li>
+          </ul>
         </nav>
       </header>
       <main>
@@ -44,98 +45,114 @@
         </section>
         <section id="animals-cards">
           <div class="carousel">
-            <button class="arrow-button arrow-left">
-              <img src="./assets/icons/arrow.svg" alt="arrow icon">
-            </button>
-            <div class="cards-container">
-              <div class="pet-card">
-                <div class="card-image">
-                  <img src="./assets/images/giant-pandas.jpg" alt="Two Giant Pandas playing on tire swing">
-                </div>
-                <div class="card-text">
-                  <div class="card-title">
-                    <h3>giant Pandas</h3>
-                    <p>Native to Southwest China</p>
-                  </div>
-                  <div class="card-logo">
-                    <img src="./assets/icons/banana-bamboo-icon.svg" alt="banana with bamboo icon">
-                  </div>
-                </div>
+            <div class="arrow-left">
+              <button class="arrow-button">
+                <img src="./assets/icons/arrow.svg" alt="arrow icon">
+              </button>
+            </div>
+            <div class="pet-card card-panda">
+              <div class="card-image">
+                <img src="./assets/images/giant-pandas.jpg" alt="Two Giant Pandas playing on tire swing">
               </div>
-              <div class="pet-card">
-                <div class="card-image">
-                  <img src="./assets/images/eagles.jpg" alt="Flying Eagle">
+              <div class="card-text">
+                <div class="card-title">
+                  <h3>giant Pandas</h3>
+                  <p>Native to Southwest China</p>
                 </div>
-                <div class="card-text">
-                  <div class="card-title">
-                    <h3>Eagles</h3>
-                    <p>Native to South America</p>
-                  </div>
-                  <div class="card-logo">
-                    <img src="./assets/icons/meet-fish-icon.svg" alt="meat and fish icon">
-                  </div>
-                </div>
-              </div>
-              <div class="pet-card">
-                <div class="card-image">
-                  <img src="./assets/images/gorillas.jpg" alt="Huge Gorilla">
-                </div>
-                <div class="card-text">
-                  <div class="card-title">
-                    <h3>Gorillas</h3>
-                    <p>Native to Congo</p>
-                  </div>
-                  <div class="card-logo">
-                    <img src="./assets/icons/banana-bamboo-icon.svg" alt="banana with bamboo icon">
-                  </div>
-                </div>
-              </div>
-              <div class="pet-card">
-                <div class="card-image">
-                  <img src="./assets/images/sloth.jpg" alt="Two toed Sloth hanging on the tree">
-                </div>
-                <div class="card-text">
-                  <div class="card-title">
-                    <h3>Two-toed Sloth</h3>
-                    <p>Mesoamerica, South America</p>
-                  </div>
-                  <div class="card-logo">
-                    <img src="./assets/icons/banana-bamboo-icon.svg" alt="banana with bamboo icon">
-                  </div>
-                </div>
-              </div>
-              <div class="pet-card">
-                <div class="card-image">
-                  <img src="./assets/images/cheetahs.jpg" alt="Mother Cheetah and her baby">
-                </div>
-                <div class="card-text">
-                  <div class="card-title">
-                    <h3>Cheetahs</h3>
-                    <p>Native to Africa</p>
-                  </div>
-                  <div class="card-logo">
-                    <img src="./assets/icons/meet-fish-icon.svg" alt="meat and fish icon">
-                  </div>
-                </div>
-              </div>
-              <div class="pet-card">
-                <div class="card-image">
-                  <img src="./assets/images/penguins.jpg" alt="Penguin standing on ice">
-                </div>
-                <div class="card-text">
-                  <div class="card-title">
-                    <h3>Penguins</h3>
-                    <p>Native to Antarctica</p>
-                  </div>
-                  <div class="card-logo">
-                    <img src="./assets/icons/meet-fish-icon.svg" alt="meat and fish icon">
-                  </div>
+                <div class="card-logo">
+                  <img src="./assets/icons/banana-bamboo-icon.svg" alt="banana with bamboo icon">
                 </div>
               </div>
             </div>
-            <button class="arrow-button arrow-right">
-              <img src="./assets/icons/arrow.svg" alt="arrow icon">
-            </button>
+            <div class="pet-card card-sloth">
+              <div class="card-image">
+                <img src="./assets/images/sloth.jpg" alt="Two toed Sloth hanging on the tree">
+              </div>
+              <div class="card-text">
+                <div class="card-title">
+                  <h3>Two-toed Sloth</h3>
+                  <p>Mesoamerica, South America</p>
+                </div>
+                <div class="card-logo">
+                  <img src="./assets/icons/banana-bamboo-icon.svg" alt="banana with bamboo icon">
+                </div>
+              </div>
+            </div>
+            <div class="pet-card card-eagle">
+              <div class="card-image">
+                <img src="./assets/images/eagles.jpg" alt="Flying Eagle">
+              </div>
+              <div class="card-text">
+                <div class="card-title">
+                  <h3>Eagles</h3>
+                  <p>Native to South America</p>
+                </div>
+                <div class="card-logo">
+                  <img src="./assets/icons/meet-fish-icon.svg" alt="meat and fish icon">
+                </div>
+              </div>
+            </div>
+            <div class="pet-card card-cheetah">
+              <div class="card-image">
+                <img src="./assets/images/cheetahs.jpg" alt="Mother Cheetah and her baby">
+              </div>
+              <div class="card-text">
+                <div class="card-title">
+                  <h3>Cheetahs</h3>
+                  <p>Native to Africa</p>
+                </div>
+                <div class="card-logo">
+                  <img src="./assets/icons/meet-fish-icon.svg" alt="meat and fish icon">
+                </div>
+              </div>
+            </div>
+            <div class="pet-card card-gorilla">
+              <div class="card-image">
+                <img src="./assets/images/gorillas.jpg" alt="Huge Gorilla">
+              </div>
+              <div class="card-text">
+                <div class="card-title">
+                  <h3>Gorillas</h3>
+                  <p>Native to Congo</p>
+                </div>
+                <div class="card-logo">
+                  <img src="./assets/icons/banana-bamboo-icon.svg" alt="banana with bamboo icon">
+                </div>
+              </div>
+            </div>
+            <div class="pet-card card-penguin">
+              <div class="card-image">
+                <img src="./assets/images/penguins.jpg" alt="Penguin standing on ice">
+              </div>
+              <div class="card-text">
+                <div class="card-title">
+                  <h3>Penguins</h3>
+                  <p>Native to Antarctica</p>
+                </div>
+                <div class="card-logo">
+                  <img src="./assets/icons/meet-fish-icon.svg" alt="meat and fish icon">
+                </div>
+              </div>
+            </div>
+            <div class="pet-card card-aligator">
+              <div class="card-image">
+                <img src="./assets/images/aligator.jpg" alt="Aligator photo">
+              </div>
+              <div class="card-text">
+                <div class="card-title">
+                  <h3>Aligators</h3>
+                  <p>Native to Southeastern U. S.</p>
+                </div>
+                <div class="card-logo">
+                  <img src="./assets/icons/meet-fish-icon.svg" alt="meat and fish icon">
+                </div>
+              </div>
+            </div>
+            <div class="arrow-right">
+              <button class="arrow-button">
+                <img src="./assets/icons/arrow.svg" alt="arrow icon">
+              </button>
+            </div>
           </div>
           <button>choose your favorite</button>
         </section>
@@ -241,35 +258,10 @@
       </main>
       <footer>
         <div class="footer-container">
-          <div class="column">
-            <a id="logo" href="#"><h1>PetStory online</h1></a>
-            <button class="button-sharp" onclick="window.location.href='./pages/donate/index.html'">donate for volunteers</button>
-            <div class="social-panel">
-              <a href="https:/facebook.com" target="_blank" class="social-item">
-                <div class="ellipse"><img src="./assets/icons/facebook-icon.svg" alt="Facebook logo" id="icon-facebook"></div>
-                <p>Facebook</p>
-              </a>
-              <a href="https:/twitter.com" target="_blank" class="social-item">
-                <div class="ellipse"><img src="./assets/icons/twitter-ico.svg" alt="Twitter logo" id="icon-twitter"></div>
-                <p>Twitter</p>
-              </a>
-              <a href="https:/instagram.com" target="_blank" class="social-item">
-                <div class="ellipse"><img src="./assets/icons/instagram-icon.svg" alt="Instagram logo" id="icon-instagram"></div>
-                <p>Instagram</p>
-              </a>
-              <a href="https:/youtube.com" target="_blank" class="social-item">
-                <div class="ellipse"><img src="./assets/icons/youtube-icon.svg" alt="Youtube logo" id="icon-youtube"></div>
-                <p>Youtube</p>
-              </a>
-            </div>
+          <div class="footer-item footer-logo">
+            <a id="logo-footer" href="#">PetStory online</a>
           </div>
-          <div class="row">
-            <a class="active" href="#">About</a>
-            <a href="#">Map</a>
-            <a href="#">Zoos</a>
-            <a href="#">Contact us</a>
-          </div>
-          <div class="column">
+          <div class="footer-item footer-form">
             <form>
               <label for="email">Subscribe for our news</label>
               <div class="form-item">
@@ -277,10 +269,37 @@
                 <input type="submit" value="Submit">
               </div>
             </form>
-            <div class="credits">
-              <p>Designed by Alisa Samborskaya</p>
-              <p>©RSSchool & ©Yem Digital 2021</p>
-            </div>
+          </div>
+          <div class="footer-item footer-button">
+            <button class="button-sharp" onclick="window.location.href='./pages/donate/index.html'">donate for volunteers</button>
+          </div>
+          <div class="footer-item footer-social">
+            <a href="https:/facebook.com" target="_blank" class="social-item">
+              <div class="ellipse"><img src="../../assets/icons/facebook-icon.svg" alt="Facebook logo" id="icon-facebook"></div>
+              <p>Facebook</p>
+            </a>
+            <a href="https:/twitter.com" target="_blank" class="social-item">
+              <div class="ellipse"><img src="../../assets/icons/twitter-ico.svg" alt="Twitter logo" id="icon-twitter"></div>
+              <p>Twitter</p>
+            </a>
+            <a href="https:/instagram.com" target="_blank" class="social-item">
+              <div class="ellipse"><img src="../../assets/icons/instagram-icon.svg" alt="Instagram logo" id="icon-instagram"></div>
+              <p>Instagram</p>
+            </a>
+            <a href="https:/youtube.com" target="_blank" class="social-item">
+              <div class="ellipse"><img src="../../assets/icons/youtube-icon.svg" alt="Youtube logo" id="icon-youtube"></div>
+              <p>Youtube</p>
+            </a>
+          </div>
+          <div class="footer-item footer-nav">
+            <a href="../../index.html">About</a>
+            <a href="#">Map</a>
+            <a href="#">Zoos</a>
+            <a href="#">Contact us</a>
+          </div>
+          <div class="footer-item footer-credits">
+            <p>Designed by Alisa Samborskaya</p>
+            <p>©RSSchool & ©Yem Digital 2021</p>
           </div>
         </div>
       </footer>
