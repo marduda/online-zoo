@@ -65,56 +65,6 @@ p {
   line-height: 130%;
 }
 
-.container {
-  position: relative;
-  width: 1600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  position: absolute;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  background-color: var(--black-color);
-  color: var(--font-light);
-}
-
-nav {
-  width: calc(100% - 440px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.burger-icon {
-  display: none;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  width: 100%;
-
-}
-
-ul > li {
-  padding: 0 29px;
-}
-
-ul > li:last-child {
-  margin-left: auto;
-}
-
-.active, .c-orange {
-  color: var(--orange-color);
-}
-
 button {
   width: 298px;
   height: 54px;
@@ -141,11 +91,67 @@ button:active {
   border-radius: 5px;
 }
 
+
+.container {
+  position: relative;
+  width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header and nav */
+
+header {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  background-color: var(--black-color);
+  color: var(--font-light);
+}
+
+nav {
+  width: calc(100% - 440px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.menu {
+  margin-left: 34px;
+}
+
+.burger-icon {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+}
+
+ul > li {
+  padding: 0 29px;
+}
+
+ul > li:last-child {
+  margin-left: auto;
+  padding: 0;
+}
+
+.active, .c-orange {
+  color: var(--orange-color);
+}
+
 #logo, #logo-footer {
   width: 82px;
   flex-shrink: 0;
   height: 52px;
-  margin-right: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,6 +169,8 @@ nav > div > a {
   color: var(--font-light);
 }
 
+/* Donate section */
+
 .background-img {
   margin-top: 76px;
   width: 100%;
@@ -173,7 +181,6 @@ nav > div > a {
 #donate {
   width: 100%;
   background: var(--section-background);
-
 }
 
 .feed-container {
@@ -205,7 +212,17 @@ nav > div > a {
 }
 
 .donate-container button {
-  margin: 0 auto 32px auto;
+  margin: 0 auto 30px auto;
+}
+
+.donate-container > p {
+  font-weight: 500;
+  line-height: 22px;
+  padding-bottom: 5px;
+}
+
+.donate-container > p > span {
+  font-weight: 400;
 }
 
 .widget {
@@ -217,13 +234,14 @@ nav > div > a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 517px;
+  width: 522px;
 }
 
 #x-icon {
   width: 14px;
   height: 14px;
-  margin-right: 46px;
+  margin-right: 63px;
+  margin-top: 30px;
 }
 
 #panda-icon {
@@ -239,14 +257,27 @@ nav > div > a {
   text-align: center;
   margin-bottom: 11px;
   color: var(--black-color);
-  margin-top: 40px;
+  margin-top: 59px;
+}
+
+.counter-container {
+
+}
+
+.counter-container > p:last-of-type {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+
 }
 
 .subtitle {
   font-weight: 400;
   font-size: 24px;
   line-height: 120%;
-  margin: 20px 0 77px 92px;
+  margin: 20px 0 60px 92px;
   text-align: left;
 }
 
@@ -260,6 +291,7 @@ nav > div > a {
 
 fieldset {
   position: relative;
+  text-align: left;
   width: 100%;
   margin: 48.5px auto 6px auto;
   border: 0;
@@ -270,7 +302,7 @@ legend {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 
 .radio-container::before {
@@ -312,7 +344,7 @@ legend {
   font-weight: 500;
   line-height: 36px;
   position: absolute;
-  top: 35px;
+  top: 33px;
 }
 
 .radio-item input[type=radio] {
@@ -453,14 +485,14 @@ input[type=radio]:checked {
 .donate-plan {
   display: flex;
   justify-content: center;
-  margin: 8px 0 43px 0;
+  margin: 25px 0 30px 0;
 }
 
 .donate-item {
   margin: 0 25px;
 }
 
-/* FOOTER */
+/* Footer */
 
 footer {
   background-color: var(--dark-background);
@@ -473,9 +505,8 @@ footer {
 }
 
 .footer-container {
-  box-sizing: content-box;
+  box-sizing: border-box;
   width: calc(100% - 440px);
-  height: calc(100% - 80px);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -484,13 +515,22 @@ footer {
 }
 
 .footer-button {
-  flex: 2 1 100%;
+  flex: 1 0 100%;
   display: flex;
   align-items: flex-end;
+  margin-top: 36px;
+}
+
+.footer-nav {
+  margin-left: 90px;
 }
 
 .footer-nav > a {
   margin: 0 29px;
+}
+
+.footer-nav > a:last-of-type {
+  margin-right: 0;
 }
 
 .footer-credits, .footer-nav {
@@ -517,7 +557,7 @@ footer {
 }
 
 .footer-social {
-  margin-top: 44px;
+  margin-top: 32px;
 }
 
 .social-item {
@@ -566,12 +606,14 @@ input[type=submit] {
 #email {
   height: 42px;
   width: 228px;
+  box-sizing: border-box;
+  margin-right: 7px;
+  padding-left: 10px;
   color: #BDBDBD;
   border-radius: 2px;
   border: 0.7px solid transparent;
   background: linear-gradient(var(--dark-background), var(--dark-background) ) padding-box,
   linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%) border-box;
-  padding-left: 10px;
 }
 
 input[type=submit]:hover, #email:focus {
@@ -612,7 +654,7 @@ a:hover .ellipse {
 
 @media (max-width: 1600px) {
   nav {
-    width: calc(100% - 60px);
+    width: calc(100% - (((100vw - 1000px) / 1.578) + 60px));
   }
 
   .container {
@@ -637,6 +679,10 @@ a:hover .ellipse {
 }
 
 @media (max-width: 1000px) {
+  nav {
+    width: calc(100% - 60px);
+  }
+
   ul > li {
     padding: 0 calc(100vw / 41.6);
     font-size: calc(1em - (10px - 1vw));
@@ -644,6 +690,14 @@ a:hover .ellipse {
 
   #logo {
     margin-right: 41px;
+  }
+
+  .menu {
+    margin: 0;
+  }
+
+  .background-img {
+    margin-top: 80px;
   }
 
   .donate-container  h3:first-of-type {
@@ -660,10 +714,12 @@ a:hover .ellipse {
 
   .donate-container h2 {
     margin-top: 20px;
+    padding-right: 8px;
   }
 
   .feed-container {
     margin-top: 30px;
+    padding-bottom: 50px;
   }
 
   .subtitle {
@@ -696,6 +752,10 @@ a:hover .ellipse {
     width: calc(100vw - 62px);
   }
 
+  form {
+    margin-right: 32px;
+  }
+
 }
 
 @media (max-width: 640px) {
@@ -703,8 +763,29 @@ a:hover .ellipse {
     height: 34px;
   }
 
+  nav {
+    width: calc(100% - 40px);
+  }
+
+  #logo {
+    border: none;
+    width: 47px;
+    height: 29px;
+    background-position: left 3px bottom 2px;
+    background-size: 10px 13.5px;
+  }
+
+  h1 {
+    font-size: 12.3px;
+    line-height: 14.75px;
+  }
+
   .burger-icon {
     display: block;
+  }
+
+  .menu {
+    display: none;
   }
 
   .background-img {
@@ -716,29 +797,9 @@ a:hover .ellipse {
     height: 100%;
   }
 
-  nav {
-    width: calc(100% - 40px);
-  }
-
-  nav > #logo {
-    border: none;
-    width: 47px;
-    height: 29px;
-    background-position: left 3px bottom 2px;
-    background-size: 10px 13.5px;
-  }
-
-  nav > h1 {
-    font-size: 12.3px;
-    line-height: 14.75px;
-  }
-
-  .menu {
-    display: none;
-  }
-
   .donate-container {
     padding-bottom: 46px;
+    padding: 0 20px 46px 20px;
   }
 
   .donate-container > h3:first-of-type {
@@ -748,14 +809,14 @@ a:hover .ellipse {
   }
 
   .donate-container > h3:last-of-type {
-    padding: 30px 0 0 0;
+    padding: 25px 0 0 0;
   }
 
   .donate-container > p {
     line-height: 22px;
   }
 
-  .donate-container > h2 {
+  .donate-container h2 {
     margin-top: 30px;
   }
 
@@ -795,7 +856,7 @@ a:hover .ellipse {
   }
 
   .feed-container {
-    padding-bottom: 30px;
+    padding-bottom: 35px;
   }
 
   .feed-container > button {
@@ -805,6 +866,19 @@ a:hover .ellipse {
   #panda-icon {
     width: calc(284px - ((640px - 100vw) / 2.3));
     height: calc(246px - ((640px - 100vw) / 2.3 ));
+  }
+
+  fieldset {
+    margin-top: 41px;
+  }
+
+  legend {
+    margin-left: 10px;
+    margin-bottom: 16px;
+  }
+
+  .input-container {
+    margin-top: 100px;
   }
 
   #another-amount {
@@ -829,6 +903,7 @@ a:hover .ellipse {
 
   .footer-button {
     margin: 0;
+    margin-bottom: 70px;
     flex: 0;
   }
 
@@ -841,7 +916,7 @@ a:hover .ellipse {
     justify-content: space-between;
     width: 50%;
     order: 2;
-
+    margin: 0 auto;
   }
 
   .footer-nav > a {
@@ -851,11 +926,15 @@ a:hover .ellipse {
   .footer-social {
     width: fit-content;
     order: 3;
-    margin: 0;
+    margin-top: 0;
     align-self: flex-end;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .social-item:first-of-type {
+    margin-top: 0;
   }
 
   .social-item > p {
@@ -870,13 +949,6 @@ a:hover .ellipse {
 @media (max-width: 320px) {
   nav {
     width: calc(100% - 20px);
-  }
-
-  #logo-footer {
-    margin: 0 auto;
-    border: none;
-    width: fit-content;
-    background-position: 62% 40%;
   }
 
   h1 {
@@ -898,6 +970,11 @@ a:hover .ellipse {
     line-height: 28.8px;
   }
 
+  .donate-container h2 {
+    margin-top: 20px;
+    padding-left: 6px;
+  }
+
   .subtitle {
     font-size: 16px;
     line-height: 22px;
@@ -913,7 +990,7 @@ a:hover .ellipse {
     width: 8px;
     height: 8px;
     margin-right: 34px;
-    margin-bottom: -10px;
+    margin-bottom: 14px;
   }
 
   .counter {
@@ -921,16 +998,21 @@ a:hover .ellipse {
     font-weight: 500;
     line-height: 32px;
     letter-spacing: 0em;
+    margin-top: 32px;
   }
 
   fieldset {
-    margin-top: 4px;
+    margin-top: 2px;
+  }
+
+  legend {
+    margin-left: 0;
   }
 
   .counter-container > p:last-of-type {
     font-size: 9px;
     line-height: 13px;
-    width: 90px;
+    width: 91px;
   }
 
   .donate-container {
@@ -982,11 +1064,15 @@ a:hover .ellipse {
   }
 
   .input-container {
-    margin-top: 49px;
+    margin-top: 46px;
   }
 
   .donate-plan {
-    margin: 27px 0 31px 0;
+    margin: 25px 0 27px 0;
+  }
+
+  .feed-container {
+    padding-bottom: 20px;
   }
 
   .feed-container > p:last-of-type {
@@ -1003,6 +1089,15 @@ a:hover .ellipse {
 
   .footer-container {
     width: calc(100% - 18px);
+    padding-top: 10px;
+  }
+
+  #logo-footer {
+    margin: 0 auto;
+    border: none;
+    width: fit-content;
+    background-position: 62% 0;
+    height: 22px;
   }
 
   .footer-button {
@@ -1012,6 +1107,10 @@ a:hover .ellipse {
 
   .footer-credits > p {
     font-size: 15px;
+  }
+
+  .social-item {
+    margin: 0;
   }
 
   .footer-social {
@@ -1024,10 +1123,8 @@ a:hover .ellipse {
 
   .footer-nav {
     width: calc(100% - 24px);
-    align-self: center;
     order: 5;
-    font-size: 16px;
     font-weight: 400;
-    line-height: 22px;
+    margin-bottom: 6px;
   }
 }
