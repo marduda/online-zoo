@@ -24,6 +24,7 @@
             <li><a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online" target="_blank">Designed by ©</a></li>
           </ul>
         </nav>
+        <div class="overlay hide"></div>
       </header>
       <div class="background-img"><img src="../../assets/images/panda-bg.jpg"></div>
       <main>
@@ -60,7 +61,7 @@
                       <label for="dollar-2000">2000</label>
                     </div>
                     <div class="radio-item">
-                      <input type="radio" id="dollar-1000" name="donate-value" value="1000" checked>
+                      <input type="radio" id="dollar-1000" name="donate-value" value="1000">
                       <label for="dollar-1000">1000</label>
                     </div>
                     <div class="radio-item">
@@ -87,7 +88,7 @@
                 </fieldset>
               </div>
               <div class="input-container">
-                <input id="another-amount" type="number" name="another-amount" placeholder="Another amount">
+                <input id="another-amount" type="number" name="another-amount" placeholder="Another amount" min="0" max="9999">
                 <span class="dolar-icon"></span>
               </div>
               <div class="donate-plan">
@@ -154,5 +155,6 @@
         </div>
       </footer>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
