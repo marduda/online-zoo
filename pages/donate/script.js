@@ -13,6 +13,7 @@ const closeBurger = () => {
   burger.classList.remove('hide');
   overlay.classList.add('hide');
   closeBtn.remove();
+  enableScroll();
 };
 
 const openBurger = () => {
@@ -22,6 +23,8 @@ const openBurger = () => {
 
   closeBtn.addEventListener('click', closeBurger)
   nav.append(closeBtn);
+
+  disableScroll();
 }
 
 const handleRadioClick = (e) => {
@@ -43,9 +46,20 @@ if (e.target.value.length === 4 || isNaN(e.key)) {
   }
 }
 
+const disableScroll = () => {
+  let scrollTop = document.documentElement.scrollTop;
+  let scrollLeft = document.documentElement.scrollLeft;
+  window.onscroll = () => window.scrollTo(scrollLeft, scrollTop);
+}
+
+const enableScroll = () => {
+  window.onscroll = () => {};
+}
+
 anotherAmount.addEventListener('keypress', validate)
 anotherAmount.addEventListener('blur', setRadio);
 radioItems.forEach(item => item.addEventListener('click', handleRadioClick));
+
 burger.addEventListener('click', openBurger);
 overlay.addEventListener('click', closeBurger);
 
