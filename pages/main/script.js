@@ -1,7 +1,7 @@
 const animalsData = {
   panda: {
     img: "./assets/images/giant-pandas.jpg",
-    imgAlt: "Two Giant Pandas playing on tire swing",
+    imgAlt: "Portrait",
     title: "giant Pandas",
     area: "Native to Southwest China",
     icon: "./assets/icons/banana-bamboo-icon.svg",
@@ -56,6 +56,86 @@ const animalsData = {
     iconAlt: 'meat and fish icon'
   }
 }
+const testimonialsData = {
+  0: {
+    name: "Mila Riksha",
+    location: "Austria",
+    img: "./assets/images/portrait-01.png",
+    imgAlt: "Portrait",
+    comment: `Ut ornare mattis lorem. Praesent vulputate at nisi non lacinia. Proin fringilla risus ante, a pulvinar purus ultricies in. Proin lobortis viverra enim, sit amet interdum ex semper euismod. Pellentesque tristique velit enim, sed tristique ex porta in. Etiam condimentum mi vel nibh congue rutrum.`
+  },
+  1: {
+    name: "User one",
+    location: "China",
+    img: "./assets/images/portrait-02.png",
+    imgAlt: "Portrait",
+    comment: `Phasellus eget risus venenatis, aliquet tortor vitae, lacinia arcu. Curabitur aliquet nibh vel convallis ultricies. Aliquam at consequat nisi, id eleifend tellus. Pellentesque congue lorem in mi suscipit dapibus. Ut posuere libero ullamcorper ex egestas, sit amet ullamcorper orci mattis. Nullam rutrum feugiat eros. Etiam sed velit fermentum, cursus nunc tincidunt, venenatis nulla. Phasellus a neque ornare, lacinia orci nec, euismod sapien. Integer venenatis dui nec dui maximus scelerisque.`
+  },
+  2: {
+    name: "Peter Pan",
+    location: "Neverland",
+    img: "./assets/images/portrait-03.png",
+    imgAlt: "Portrait",
+    comment: `Maecenas quis elit at leo aliquam fringilla vitae sit amet velit. Sed egestas dignissim eros, vel bibendum neque fringilla id. Nulla imperdiet pretium est, in dapibus felis molestie et. In eleifend sit amet orci dapibus cursus. Integer eu lacinia ipsum. Sed semper, quam id suscipit eleifend, purus metus porttitor dolor, ac lacinia est dui eu nisi.`
+  },
+  3: {
+    name: "Three Days",
+    location: "USA",
+    img: "./assets/icons/user-icon.svg",
+    imgAlt: "Portrait",
+    comment: `Sed at ligula finibus, venenatis arcu et, vestibulum augue. Maecenas porta nisi ac odio fringilla consectetur a nec nibh. In eu dui nisi. Etiam iaculis, augue sagittis rutrum porttitor, elit massa finibus urna, id porta mi nisl vel dui. Proin velit orci, sagittis non commodo et, finibus sed elit. Fusce luctus nec urna nec lobortis. Curabitur feugiat ipsum et risus ultricies cursus.`
+  },
+  4: {
+    name: "Fourty Six",
+    location: "China",
+    img: "./assets/images/portrait-02.png",
+    imgAlt: "Portrait",
+    comment: `Sed sed sapien mi. Maecenas porta pretium odio quis ultrices. In consectetur felis ut neque dictum tristique. Cras efficitur placerat dui id finibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer fermentum erat in quam pretium, eget hendrerit diam pellentesque.`
+  },
+  5: {
+    name: "Just Five",
+    location: "Australia",
+    img: "./assets/icons/user-icon.svg",
+    imgAlt: "Portrait",
+    comment: `Sed gravida dui eget bibendum lacinia. Aliquam pharetra orci et urna commodo tristique. Ut consectetur, neque eu auctor tristique, mauris mauris convallis tellus, vel commodo leo nulla eget lectus.`
+  },
+  6: {
+    name: "Jay Six",
+    location: "Finland",
+    img: "./assets/images/portrait-01.png",
+    imgAlt: "Portrait",
+    comment: `Duis a eleifend augue. Vestibulum quis faucibus orci. Integer nec ipsum sollicitudin, convallis justo eu, vehicula mauris. Vestibulum in sollicitudin sapien. Vivamus dolor felis, blandit at venenatis vitae, faucibus ac libero.`
+  },
+  7: {
+    name: "Seventy Seven",
+    location: "Kongo",
+    img: "./assets/icons/user-icon.svg",
+    imgAlt: "Portrait",
+    comment: `Donec eu accumsan lacus, a mattis dui. Suspendisse imperdiet sapien quis dolor viverra, ac sodales arcu placerat. Nunc facilisis purus et nisi lacinia, nec ultricies ante ornare. Ut eget mattis massa. Etiam eu risus velit.`
+  },
+  8: {
+    name: "User Eight",
+    location: "Thailand",
+    img: "./assets/images/portrait-03.png",
+    imgAlt: "Portrait",
+    comment: `Mauris ipsum lorem, dignissim quis neque elementum, pellentesque ultrices diam. Aliquam et odio ac mauris iaculis ullamcorper ut nec nisi. Sed quis dictum magna. Duis lacinia nisl at augue rhoncus euismod. Curabitur ac eros quis justo elementum rhoncus a id mi.`
+  },
+  9: {
+    name: "Nine Tails",
+    location: "Japan",
+    img: "./assets/icons/user-icon.svg",
+    imgAlt: "Portrait",
+    comment: `Suspendisse rhoncus quam quis ante accumsan, id gravida risus sollicitudin. Nunc non faucibus sem. Curabitur eu bibendum nibh. Mauris imperdiet euismod dolor a laoreet. Fusce sodales mi et est dictum molestie.`
+  },
+  10: {
+    name: "Ben Ten",
+    location: "Canada",
+    img: "./assets/images/portrait-02.png",
+    imgAlt: "Portrait",
+    comment: `Aliquam dolor eros, pulvinar in finibus sit amet, molestie at leo. Duis semper viverra pellentesque. Sed dapibus eu felis at ultrices. Cras at congue magna, vitae mattis lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. In sollicitudin mattis lectus. Mauris non elit volutpat, facilisis ipsum quis, sagittis neque. Nulla ullamcorper erat nec lectus condimentum volutpat.`
+  }
+}
+
 const content = document.querySelector('.content');
 
 // Navigation
@@ -97,22 +177,9 @@ const enableScroll = () => {
 burger.addEventListener('click', openBurger);
 overlay.addEventListener('click', closeBurger);
 
-const createArrow = (direction) => {
-  let arrow = document.createElement('div');
-  arrow.className = `arrow-${direction}`;
-  let button = document.createElement('button');
-  button.className = 'arrow-button';
-  let icon = document.createElement('img');
-  icon.src = './assets/icons/arrow.svg';
-  icon.alt = 'arrow icon';
-  button.append(icon);
-  arrow.append(button);
-  return arrow;
-}
-
-const arrowLeft = createArrow('left');
-const arrowRight = createArrow('right');
-
+// Carousel
+const arrowLeft = document.querySelector('.arrow-left');
+const arrowRight = document.querySelector('.arrow-right');
 
 const createCards = () => {
   let cards = [];
@@ -158,7 +225,6 @@ const createCards = () => {
 const createGallery = () => {
   const gallery = new DocumentFragment();
   let cards = [...animalCards];
-  let limit = window.innerWidth >= 1000 ? 6 : 4;
 
   for(let i = 0; i < 6; i++) {
     let random = Math.floor(Math.random() * cards.length);
@@ -166,12 +232,140 @@ const createGallery = () => {
     cards.splice(random, 1);
   }
 
-  content.replaceChildren(arrowLeft, gallery, arrowRight);
+  content.replaceChildren(gallery);
 };
 
 const animalCards = createCards();
 
 createGallery();
 
-arrowLeft.addEventListener('click', createGallery);
-arrowRight.addEventListener('click', createGallery);
+// animation
+const position = window.innerWidth * 1.2;
+const cardsOut = (direction) => {
+  let sign = direction === 'arrow-left' ? '-' : '';
+  return [
+    {
+      transform: 'translateX(0)'
+    },
+    {
+      transform: `translateX(${sign + position}px)`
+    }
+  ]
+};
+
+const cardsIn = (direction) => {
+  let sign = direction === 'arrow-left' ? '' : '-';
+  return [
+    {
+      transform: `translateX(${sign + position}px)`
+    },
+    {
+      transform: 'translateX(0)'
+    }
+  ]
+};
+
+const cardsTiming = {
+  duration: 300,
+  iterations: 1,
+}
+
+const animation = (e) => {
+  if(e.detail < 2) {
+    let direction = e.currentTarget.className;
+
+    let cards = document.querySelector('.content');
+    let animation = cards.animate(cardsOut(direction), cardsTiming);
+    animation.finished.then(createGallery).then(() => {
+      animation = cards.animate(cardsIn(direction), cardsTiming)
+    });
+  }
+}
+
+arrowLeft.addEventListener('click', animation);
+arrowRight.addEventListener('click', animation);
+
+// Testimonials
+let modal = document.querySelector('.testimonial-modal');
+let closeModalBtn = document.createElement('a');
+closeModalBtn.className = 'close-btn';
+
+const openCardModal = (e) => {
+  let cardId = e.currentTarget.dataset.id;
+  let modalCard = testimonialCards[cardId].cloneNode(true);
+
+  modalCard.className = 'testimonial-card-open';
+  modalCard.append(closeModalBtn);
+  modal.classList.add('show');
+  modal.replaceChildren(modalCard);
+  disableScroll();
+};
+
+const closeCardModal = (e) => {
+  if(e.target === e.currentTarget) {
+    modal.classList.remove('show');
+    enableScroll();
+  }
+};
+
+closeModalBtn.addEventListener('click', closeCardModal);
+modal.addEventListener('click', closeCardModal);
+
+const createTestimonialCards = () => {
+  let cards = [];
+
+  const createTestimonialCard = (userData, index) => {
+    let card = document.createElement('div');
+    let cardHeader = document.createElement('div');
+    let portrait = document.createElement('img');
+    let userInfo = document.createElement('div');
+    let name = document.createElement('h3');
+    let location = document.createElement('p');
+    let comment = document.createElement('p');
+
+    card.className = 'testimonials-card';
+    card.onclick = openCardModal;
+    card.dataset.id = index;
+    cardHeader.className = 'testimonial-header';
+    portrait.className = 'user-icon';
+    portrait.src = userData.img;
+    portrait.alt = 'portrait photo';
+    userInfo.className = 'user-info';
+    name.textContent = userData.name;
+    location.className = 'small-paragraph';
+    location.textContent = `Local ${userData.location} · Today`;
+    comment.className = 'small-paragraph';
+    comment.textContent = userData.comment;
+
+    userInfo.append(name, location)
+    cardHeader.append(portrait, userInfo);
+    card.append(cardHeader, comment);
+
+    cards.push(card);
+  };
+
+  for(let user in testimonialsData) {
+    createTestimonialCard(testimonialsData[user], user);
+  };
+
+  return cards;
+};
+
+const testimonialsContainer = document.querySelector('.cards-container');
+const testimonialCards = createTestimonialCards();
+
+let progressBar = document.querySelector('.progress-range');
+
+const setProgressBar = function(e){
+  let index = progressBar.value;
+  let limit = +index + 4;
+  let currentCards = new DocumentFragment();
+
+  for(let i = index; i < limit; i++) {
+    currentCards.append(testimonialCards[i]);
+  }
+  testimonialsContainer.replaceChildren(currentCards);
+}
+setProgressBar();
+progressBar.addEventListener("input", setProgressBar);
+
