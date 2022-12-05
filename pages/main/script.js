@@ -291,14 +291,17 @@ let closeModalBtn = document.createElement('a');
 closeModalBtn.className = 'close-btn';
 
 const openCardModal = (e) => {
-  let cardId = e.currentTarget.dataset.id;
-  let modalCard = testimonialCards[cardId].cloneNode(true);
+  console.log(window.innerWidth)
+  if( window.innerWidth < 641 ) {
+    let cardId = e.currentTarget.dataset.id;
+    let modalCard = testimonialCards[cardId].cloneNode(true);
 
-  modalCard.className = 'testimonial-card-open';
-  modalCard.append(closeModalBtn);
-  modal.classList.add('show');
-  modal.replaceChildren(modalCard);
-  disableScroll();
+    modalCard.className = 'testimonial-card-open';
+    modalCard.append(closeModalBtn);
+    modal.classList.add('show');
+    modal.replaceChildren(modalCard);
+    disableScroll();
+  }
 };
 
 const closeCardModal = (e) => {
